@@ -36,7 +36,7 @@ const usuariosDoSite = [
     }
 ]
 
-function realizarLogin(email, senha){
+export function realizarLogin(email, senha){
     for(let i=0; i < usuariosDoSite.length; i++){
         if(usuariosDoSite.at(i).email == email && usuariosDoSite.at(i).senha == senha){
             if(usuariosDoSite.at(i).expirado){
@@ -47,8 +47,3 @@ function realizarLogin(email, senha){
     }
     return "Credenciais incorretas."
 }
-
-console.log(realizarLogin("ananias@sitedojulio.com.br","SenhaA"));
-console.log(realizarLogin("julio@sitedojulio.com.br","SenhaJ"));
-console.log(realizarLogin("trackinas@dojuliodelima.com","SenhaTrackinas"));
-console.log(realizarLogin("ananias@sitedojulio.com.br","TrackinasNaoEhBiscoito"));
