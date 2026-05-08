@@ -34,16 +34,16 @@ const usuariosDoSite = [
         "senha" : "SenhaJ",
         "expirado" : true
     }
-]
+];
 
 export function realizarLogin(email, senha){
     for(let i=0; i < usuariosDoSite.length; i++){
         if(usuariosDoSite.at(i).email == email && usuariosDoSite.at(i).senha == senha){
             if(usuariosDoSite.at(i).expirado){
-                return "Renove suas credenciais."
+                return "Renove suas credenciais.";
             }
-            return "Login realizado com sucesso."
+            return "Login realizado com sucesso.";
         }
     }
-    return "Credenciais incorretas."
+    return "Credenciais incorretas.";
 }
