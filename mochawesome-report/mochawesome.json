@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-08T23:26:14.889Z",
+    "end": "2026-05-08T23:26:14.900Z",
+    "duration": 11,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0d5dc645-ac04-44d1-81b8-a11ebd1f9a21",
+      "title": "",
+      "fullFile": "D:\\Git\\desafio-controle-acessos-site\\test\\controleLoginSite.test.js",
+      "file": "\\test\\controleLoginSite.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "72ccf160-2e91-4e4a-849a-647af6ada87c",
+          "title": "Testes do Controle de Logins do Site",
+          "fullFile": "D:\\Git\\desafio-controle-acessos-site\\test\\controleLoginSite.test.js",
+          "file": "\\test\\controleLoginSite.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validar que a autenticação ocorre com sucesso utilizando um email válido e uma senha válida nao expirada.",
+              "fullTitle": "Testes do Controle de Logins do Site Validar que a autenticação ocorre com sucesso utilizando um email válido e uma senha válida nao expirada.",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Arrange\nconst emailValido = \"ananias@sitedojulio.com.br\";\nconst senhaValida = \"SenhaA\";\n\n// Act\nconst retornoDaFuncao = realizarLogin(emailValido,senhaValida);\n\n// Assert\nassert.equal(retornoDaFuncao, 'Login realizado com sucesso.')",
+              "err": {},
+              "uuid": "2b5e6117-5ca0-42ec-971f-878244e9291c",
+              "parentUUID": "72ccf160-2e91-4e4a-849a-647af6ada87c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar que é requisitado a renovação das credenciais ao tentar autenticar um usuário com email válido e senha válida porém expirada.",
+              "fullTitle": "Testes do Controle de Logins do Site Validar que é requisitado a renovação das credenciais ao tentar autenticar um usuário com email válido e senha válida porém expirada.",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Arrange\nconst emailValido = \"julio@sitedojulio.com.br\";\nconst senhaValidaExpirada = \"SenhaJ\";\n// Act\nconst retornoDaFuncao = realizarLogin(emailValido, senhaValidaExpirada);\n// Assert\nassert.equal(retornoDaFuncao,'Renove suas credenciais.');",
+              "err": {},
+              "uuid": "e95a7029-60d1-4b44-9cdb-6622b0f73937",
+              "parentUUID": "72ccf160-2e91-4e4a-849a-647af6ada87c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar que a autenticação é impedida ao utilizar um email inexistente no sistema.",
+              "fullTitle": "Testes do Controle de Logins do Site Validar que a autenticação é impedida ao utilizar um email inexistente no sistema.",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Arrange\nconst emailInexistente = \"trackinas@dojuliodelima.com\";\nconst senhaInexistente = \"SenhaTrackinas\";\n\n// Act\nconst retornoDaFuncao = realizarLogin(emailInexistente, senhaInexistente);\n// Assert\nassert.equal(retornoDaFuncao, \"Credenciais incorretas.\");",
+              "err": {},
+              "uuid": "ba0766a1-b55e-4255-959b-3020f2ef03fd",
+              "parentUUID": "72ccf160-2e91-4e4a-849a-647af6ada87c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar que a autenticação é impedida ao tentar utilizar um email válido e uma senha inválida.",
+              "fullTitle": "Testes do Controle de Logins do Site Validar que a autenticação é impedida ao tentar utilizar um email válido e uma senha inválida.",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Arrange\nconst emailValido = \"ananias@sitedojulio.com.br\";\nconst senhaInvalida = \"TrackinasNaoEhBiscoito\";\n// Act\nconst retornoDaFuncao = (realizarLogin(emailValido, senhaInvalida));\n// Assert\nassert.equal(retornoDaFuncao, \"Credenciais incorretas.\");",
+              "err": {},
+              "uuid": "96815ef4-f9e5-4ee8-938b-e2859c072ed0",
+              "parentUUID": "72ccf160-2e91-4e4a-849a-647af6ada87c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2b5e6117-5ca0-42ec-971f-878244e9291c",
+            "e95a7029-60d1-4b44-9cdb-6622b0f73937",
+            "ba0766a1-b55e-4255-959b-3020f2ef03fd",
+            "96815ef4-f9e5-4ee8-938b-e2859c072ed0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}

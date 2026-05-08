@@ -22,6 +22,7 @@
   "homepage": "https://github.com/dbkarolak/desafio-controle-acessos-site#readme",
   "description": "",
   "dependencies": {
-    "mocha": "^11.7.5"
+    "mocha": "^11.7.5",
+    "mochawesome": "^7.1.4"
   }
 }
