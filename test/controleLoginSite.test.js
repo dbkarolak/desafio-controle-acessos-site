@@ -25,4 +25,17 @@ describe('Testes do Controle de Logins do Site', function () {
         // Assert
         assert.equal(retornoDaFuncao,'Renove suas credenciais.');
     });
+
+    it('Validar que a autenticação é impedida ao utilizar um email inexistente no sistema.', function (){
+        // Arrange
+        const emailInexistente = "trackinas@dojuliodelima.com";
+        const senhaInexistente = "SenhaTrackinas";
+        
+        // Act
+        const retornoDaFuncao = realizarLogin(emailInexistente, senhaInexistente);
+
+        // Assert
+        assert.equal(retornoDaFuncao, "Credenciais incorretas.");
+    });
+
 })
