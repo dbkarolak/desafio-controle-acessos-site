@@ -38,4 +38,15 @@ describe('Testes do Controle de Logins do Site', function () {
         assert.equal(retornoDaFuncao, "Credenciais incorretas.");
     });
 
+    it('Validar que a autenticação é impedida ao tentar utilizar um email válido e uma senha inválida.', function(){
+        // Arrange
+        const emailValido = "ananias@sitedojulio.com.br";
+        const senhaInvalida = "TrackinasNaoEhBiscoito";
+
+        // Act
+        const retornoDaFuncao = (realizarLogin(emailValido, senhaInvalida));
+
+        // Assert
+        assert.equal(retornoDaFuncao, "Credenciais incorretas.");
+    });
 })
