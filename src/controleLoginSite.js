@@ -37,6 +37,9 @@ const usuariosDoSite = [
 ];
 
 export function realizarLogin(email, senha){
+    if(!email || !senha){
+        throw new Error("Usuário e senha são obrigatórios.");
+    }
     for(let i=0; i < usuariosDoSite.length; i++){
         if(usuariosDoSite.at(i).email == email && usuariosDoSite.at(i).senha == senha){
             if(usuariosDoSite.at(i).expirado){

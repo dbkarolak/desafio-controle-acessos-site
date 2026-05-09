@@ -49,4 +49,15 @@ describe('Testes do Controle de Logins do Site', function () {
         // Assert
         assert.equal(retornoDaFuncao, "Credenciais incorretas.");
     });
-})
+
+/*    it('Validar que o email e senha são preenchios', function() {
+        // Act & Assert
+        assert.throws(
+            function(){
+                realizarLogin(),
+                { message: 'Usuário e senha são obrigatórios.'}
+            }
+        );
+    });
+*/
+});
