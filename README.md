@@ -40,12 +40,6 @@ Abra o projeto utilizando uma IDE de sua preferência, como:
 
 - Visual Studio Code
 
-Exemplo utilizando o VS Code:
-
-```cmd
-code .
-```
-
 ### 3) Instale as dependências
 
 Execute o comando abaixo na raiz do projeto:
